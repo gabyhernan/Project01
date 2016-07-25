@@ -15,7 +15,7 @@ var moveTaylor;
 var moveDonald;
 var started = false;
 
-var audio =$('#soundclip')[0];
+var audio =$('#soundclip')[0];  //two lines are from stack overflow
   console.log(audio)
 $('button.play').click(function()  {
   if(started === false) { // once clicked once it becomes true
@@ -36,7 +36,7 @@ $('button.pause').click(function(){
   clearInterval(moveTaylor);
   clearInterval(moveDonald);
 $('.score h2').text("Score: 0" );
-  score = 0; // restarts score and pauses sound
+  score = 0; // restarts  score , clears interval, pauses sound
   audio.pause();
 });
 
@@ -74,11 +74,11 @@ function getBlahImg () {
 
 
   function moveTarget (person, time) { //
-    setInterval(function() { //  two lines are from duck hw
+    setInterval(function() {
         if (person.css('display')==='none'){
 
        person.children().css('content','url(images/'+person.children().attr('id')+'.png)');
-      person.css("top", Math.random() * window.innerHeight);
+      person.css("top", Math.random() * window.innerHeight); // this two lines are from duck hw
       person.css("left", Math.random() * window.innerWidth);
 
 
@@ -93,10 +93,10 @@ function getBlahImg () {
 
 //   function moveTarget () {
 //     setInterval(function() {
-//         var targets = $('.target') // from duck hw
+//         var targets = $('.target') /
 //         targets.forEach(function(target){
 //           if (target.css('display')==='none'){
-//           target.css("top", Math.random() * window.innerHeight);
+//           target.css("top", Math.random() * window.innerHeight); // this line is  from duck hw
 //           target.css("left", Math.random() * window.innerWidth);
 //         }
 //         else{
@@ -110,7 +110,7 @@ function getBlahImg () {
 
 
 
-
+// This was another way I tried to change image randomly
 //     var targetRandom = Math.floor(Math.random() * target.length); // randomly chooses an image
 //     // $('.hide').hide();
 
@@ -119,37 +119,3 @@ function getBlahImg () {
 //         .fadeIn(1000);
 //         $('.game').append($img);
 //   })
-
-//       $('.game').on('click', 'img', function() {
-//        $(this).remove(); // removes target when clicked
-//                           // have to add image target effect here
-//   })                    // have "shh" sound go off here
-
-// })
-
-// createTarget;
-
-
-
-
-
-
-// var createTarget = $(function() {
-//   $('.hide').on('click', function() { // from food basket hw
-//     var targetRandom = Math.floor(Math.random() * target.length); // randomly chooses an image
-//     // $('.hide').hide();
-
-//     var $img = $('<img>');
-//     $img.attr('src', target[targetRandom])
-//         .fadeIn(1000);
-//         $('.game').append($img);
-//   })
-
-//       $('.game').on('click', 'img', function() {
-//        $(this).remove(); // removes target when clicked
-//                           // have to add image target effect here
-//   })                    // have "shh" sound go off here
-
-// })
-
-// createTarget;

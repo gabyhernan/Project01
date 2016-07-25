@@ -1,0 +1,89 @@
+.background{
+background: url(../images/background.jpg) no-repeat center center fixed;
+background-size: cover;
+/* overflow:hidden; */
+cursor:url(../images/cursor.cur), auto;
+/* padding: 10px; */
+ }
+
+.button {
+  background-color:#e4685d;
+  border-radius:13px;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Trebuchet MS;
+  font-size:19px;
+  font-weight:bold;
+  padding:6px 15px;
+  text-decoration:none;
+}
+
+.button:hover {
+  background-color:#eb675e;
+  cursor:url(../images/cursor.cur), auto;
+}
+.button:active {
+  position:relative;
+  top:1px;
+}
+
+.score,.authorinfo {
+   color:#ffffff;
+  font-family:Trebuchet MS;
+  font-size:22px;
+  position: relative;
+
+}
+
+h1#title {
+  font-family: helvetica,sans-seriff;
+  /* float: initial; */
+  text-align: end;
+  font-size: 56px;
+  padding: 10px;
+  margin: 10px;
+
+ }
+
+.relative {
+  position:relative;
+}
+
+ .target {
+  position:absolute;
+ }
+
+
+#kanye {
+ height: 110px;
+  /* width: 10%; */
+  position: absolute;
+  content: url(../images/kanye.png);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  left: 200px;
+
+ }
+
+#taylor {
+  height: 110px;
+  /* width: 10%; */
+  position: absolute;
+  display:block ;
+  margin-left: auto;
+  margin-right: auto;
+  content: url(../images/taylor.png);
+  left: 310px;
+
+}
+
+#donald {
+   height: 110px;
+    margin-left: auto;
+  margin-right: auto;
+  /* width: 200px; */
+   position: absolute;
+  content: url(../images/donald.png);
+  left: 390px;
+}

@@ -1,89 +1,90 @@
-.background{
-background: url(../images/background.jpg) no-repeat center center fixed;
-background-size: cover;
-/* overflow:hidden; */
-cursor:url(../images/cursor.cur), auto;
-/* padding: 10px; */
- }
-
-.button {
-  background-color:#e4685d;
-  border-radius:13px;
-  display:inline-block;
+body {
+   margin: 0;
+  padding: 0;
+ cursor:url(../images/cursor.cur), auto;
   color:#ffffff;
+}
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://source.unsplash.com/CF4c2GAker4/1600x900");
+overflow:  hidden;
+  background-size: cover;
+  position: absolute;}
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#title {
+  font-size: 4.5rem;
+  padding-bottom: .3em;
+  font-family: 'Gloria Hallelujah', cursive;
+ }
+#info {padding-left: 2em;}
+.button {
+  background-color:rgba(255, 154, 0, 0.95);
+  border-radius: 10px;
+  color:#ffffff;
+  border: none;
   font-family:Trebuchet MS;
   font-size:19px;
   font-weight:bold;
   padding:6px 15px;
-  text-decoration:none;
 }
-
 .button:hover {
-  background-color:#eb675e;
+  background-color: rgb(202, 100, 11);
   cursor:url(../images/cursor.cur), auto;
 }
 .button:active {
   position:relative;
   top:1px;
 }
-
 .score,.authorinfo {
-   color:#ffffff;
   font-family:Trebuchet MS;
   font-size:22px;
-  position: relative;
-
 }
-
-h1#title {
-  font-family: helvetica,sans-seriff;
-  /* float: initial; */
-  text-align: end;
-  font-size: 56px;
-  padding: 10px;
-  margin: 10px;
-
- }
-
-.relative {
-  position:relative;
+/* Media Queries  */
+@media  (min-width:415px) and (max-width: 569px){
+  #title{ font-size: 3.5rem; }
+  .pick{height:105px;
+        margin: 40px -19px;
+    }
 }
-
- .target {
-  position:absolute;
+@media (max-width: 414px) {
+  #title{
+    font-size: 4.2rem;
+    padding-bottom: 4.3em;}
+  .pick { height: 130px;}
+  .target {bottom:  725px;
+          left:  -220px;}
+  .button { margin: 5px 10px; }
+}
+@media (min-width: 319px) and (max-width:413px){
+  #title{font-size: 3.6em;}
+  .pick{ height: 100px; }
+  .target{ top: -25px;
+          left:  -230px;}
+}
+@media (min-width: 1px) and (max-width: 320px) {
+  #title{ font-size: 3em;}
+  .pick{ height: 75px;
+    margin:  10px -11px; }
  }
-
-
-#kanye {
- height: 110px;
-  /* width: 10%; */
-  position: absolute;
-  content: url(../images/kanye.png);
-  margin-left: auto;
-  margin-right: auto;
+/* Game pieces   */
+.relative {position:relative;}
+ .target {position:absolute;}
+.pick {
+  max-height: 140px;
+ position: absolute;
   display: block;
-  left: 200px;
-
- }
-
+  top:  130px;}
+#kanye {
+  content: url(../images/kanye.png);
+  left: 240px;}
 #taylor {
-  height: 110px;
-  /* width: 10%; */
-  position: absolute;
-  display:block ;
-  margin-left: auto;
-  margin-right: auto;
   content: url(../images/taylor.png);
-  left: 310px;
-
-}
-
+  left: 380px;}
 #donald {
-   height: 110px;
-    margin-left: auto;
-  margin-right: auto;
-  /* width: 200px; */
-   position: absolute;
   content: url(../images/donald.png);
-  left: 390px;
-}
+  left: 482px;}

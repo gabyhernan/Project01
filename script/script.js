@@ -30,7 +30,6 @@ moveDonald = moveTarget(donald, 800);
 
 
 
-
 $('button.pause').click(function(){
   clearInterval(moveKanye);
   clearInterval(moveTaylor);
@@ -39,7 +38,6 @@ $('.score h2').text("Score: 0" );
   score = 0; // restarts  score , clears interval, pauses sound
   audio.pause();
 });
-
 
 
 $('.pick').click(function() {
@@ -65,14 +63,6 @@ function getBlahImg () {
 }
 
 
-
-// $('.target').click(function() {
-//   score++;
-//   $('.score h2').text("Score: " + score);
-//   $(this).attr('src','images/blah.png');
-// })
-
-
   function moveTarget (person, time) { //
     setInterval(function() {
         if (person.css('display')==='none'){
@@ -90,32 +80,3 @@ function getBlahImg () {
 }
 
 });
-
-//   function moveTarget () {
-//     setInterval(function() {
-//         var targets = $('.target') /
-//         targets.forEach(function(target){
-//           if (target.css('display')==='none'){
-//           target.css("top", Math.random() * window.innerHeight); // this line is  from duck hw
-//           target.css("left", Math.random() * window.innerWidth);
-//         }
-//         else{
-//           // do nothing
-//         }
-//         target.fadeToggle("slow","linear");s
-//         })
-
-//     }, 100)
-// }
-
-
-
-// This was another way I tried to change image randomly
-//     var targetRandom = Math.floor(Math.random() * target.length); // randomly chooses an image
-//     // $('.hide').hide();
-
-//     var $img = $('<img>');
-//     $img.attr('src', target[targetRandom])
-//         .fadeIn(1000);
-//         $('.game').append($img);
-//   })
